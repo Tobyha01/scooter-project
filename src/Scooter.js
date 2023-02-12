@@ -1,5 +1,7 @@
 class Scooter{
-  // scooter code here
+  constructor(station,){
+    this.station = station
+  }
 }
 
 

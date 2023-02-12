@@ -11,11 +11,14 @@ const User = require('../src/User')
 /* Scooter object checks */
 describe('scooter object checks', function() {
   test('checks if scooter is an object', function() {
-    let scooter1 = new Scooter
-    expect(typeof scooter1).tobe("object");
+    let scooter1 = new Scooter()
+    expect(typeof scooter1).tobe("object")
   });
 
-  
+  test("check if scooter station is a string or null if in use", function() {
+    let scooter2 = new Scooter()
+    expect(scooter2).toHaveProperty("station", "London")
+  });
 })
 
 //Method tests
