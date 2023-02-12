@@ -1,8 +1,12 @@
 class Scooter{
-  constructor(station,){
-    this.station = station
+  constructor(station, username){
     if(!station){
       this.station = null
+      this.username = username
+    }
+    else{
+      this.station = station
+      this.username = null
     }
   }
 }
