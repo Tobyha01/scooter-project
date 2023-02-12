@@ -19,6 +19,11 @@ describe('scooter object checks', function() {
     let scooter2 = new Scooter()
     expect(scooter2).toHaveProperty("station", "London" || "station", "null")
   });
+  
+  test("check if a scooter has a user property assigned to it, or null (if docked)", function() {
+    let scooter3 = new Scooter()
+    expect(scooter3).toHaveProperty("username", "Tobyha01" || "username", "null")
+  });
 })
 
 // //Method tests
