@@ -12,25 +12,25 @@ const User = require('../src/User')
 describe('scooter object checks', function() {
   test('checks if scooter is an object', function() {
     let scooter1 = new Scooter()
-    expect(typeof scooter1).tobe("object")
+    expect(typeof scooter1).toBe("object")
   });
 
   test("check if scooter station is a string or null if in use", function() {
     let scooter2 = new Scooter()
-    expect(scooter2).toHaveProperty("station", "London")
+    expect(scooter2).toHaveProperty("station", "London" || "station", "null")
   });
 })
 
-//Method tests
-describe('scooter methods', () => {
-  // tests here!
+// //Method tests
+// describe('scooter methods', () => {
+//   // tests here!
 
-  //rent method
+//   //rent method
 
-  //dock method
+//   //dock method
 
-  //requestRepair method
+//   //requestRepair method
 
-  //charge method
+//   //charge method
 
-})
+// })
