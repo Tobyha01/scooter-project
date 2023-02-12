@@ -1,9 +1,7 @@
-/* station: string; the station the scooter is located at or null if checked out
-user: the User who checked out the Scooter, or null if docked
-serial: a number assigned sequentially from nextSerial
+/*serial: a number assigned sequentially from nextSerial
 nextSerial: a static number which starts at 1 and increments each time a new serial number is assigned
 charge: a number from 0 (no charge at all) to 100 (fully charged)
-isBroken: boolean */
+*/
 
 const Scooter = require('../src/Scooter')
 const User = require('../src/User')
@@ -24,6 +22,30 @@ describe('scooter object checks', function() {
     let scooter3 = new Scooter()
     expect(scooter3).toHaveProperty("username", "Tobyha01" || "username", "null")
   });
+  
+  test("check if a scooter is broken", function() {
+    let scooter4 = new Scooter()
+    expect(scooter4).toHaveProperty("isBroken", true || "isBroken", false)
+  })
+
+  // test("check if the serial number being assigned is sequential, and being assigned from nextserial", function() {
+  //   let scooter4 = new Scooter()
+  //   expect(scooter4).toHaveProperty("serial", "1")
+  //   expect(typeof scooter4.serial).toBe("number")
+    
+  // })
+
+  // test("check if next serial is a static method, starting from 1 and increments by 1 each time a new serial is assigned ", function() {
+  //   let scooter5 = new Scooter()
+  //   expect(scooter5.nextSerial).propertyType("static")
+  //   expect(scooter5.nextSerial).toIncreaseBy(1)
+  // })
+
+  // test("check scooter has a charge value between 0 - 100", function() {
+  //   let scooter4 = new Scooter()
+  //   expect(scooter7).toHaveProperty("charge" <= 0 || "charge" <= 100)
+  // });
+
 })
 
 // //Method tests
